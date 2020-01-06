@@ -1,0 +1,17 @@
+.fullApp {
+  text-align: center;
+}
+
+.header{
+  background-color: #D81921;
+  color: #E6E4FF;
+  width: 100%;
+  padding: 1rem;
+}
+
+.secondHeader {
+  background-color: #21201E;
+  color: #E6E4FF;
+  padding: 2rem;
+  width: 100%;
+}

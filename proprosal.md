@@ -50,11 +50,24 @@ ______________________________________________________________
 
 Time Frame
 
---Creating basic layout: 1hr / 1
+--Creating basic layout: 2hr / 2
 
---Grabbing API: 2hrs / 3
+--Grabbing API 2: 2hrs / 4
 
---Applying API to modules: 3hrs / 6
+--Applying API to module 1: 5hrs / 9
 
---CSSing Modules: 1hr / 7
+--CSSing Module 1: 2hrs / 11
 
+--Copying Module over for every other API: 3hrs / 14
+
+--Getting React Router up and running: 6hrs / 20
+
+--Fixing rogue bugs: 2hrs / 22
+
+--Bronze here--
+
+--Adding Dice Roller Module: 3hrs / 25
+
+--Finalizing CSS: 3hrs / 28
+
+--Silver here--
