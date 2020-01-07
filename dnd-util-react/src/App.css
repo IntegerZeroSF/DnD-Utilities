@@ -2,16 +2,51 @@
   text-align: center;
 }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #E6E4FF;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #21201E;
+  height: 100%;
+}
+
+.appTitle {
+  padding-right: 3rem;
+  font-weight: bolder;
+  font-size: large;
+}
+
 .header{
   background-color: #D81921;
   color: #E6E4FF;
   width: 100%;
-  padding: 1rem;
+  padding: .5rem;
 }
 
 .secondHeader {
-  background-color: #21201E;
+  background-color: rgb(33, 32, 30);
   color: #E6E4FF;
   padding: 2rem;
   width: 100%;
+}
+
+.body {
+  padding-top: 1rem;
+  background-color: #F5F5F5;
 }

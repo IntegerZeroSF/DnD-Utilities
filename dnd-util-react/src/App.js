@@ -1,29 +1,29 @@
 import React from 'react';
 import './App.css'
-import { useEffect } from 'react'
+// import { useEffect } from 'react'
+
+import SpellList from './SpellList/SpellList.js'
 
 //http://dnd5eapi.co/api/
 
 
 function App() {
 
-  // let spellList= 'http://dnd5eapi.co/api/'
-
-  useEffect(() => {
-    fetch('http://dnd5eapi.co/api/spells')
-      .then(res => res.json())
-      .then(spellData => {
-        console.log(spellData)
-      })
-  })
-
   return (
     <div className="fullApp">
       <header className='header'>
-        <p>Up and running</p>
+         <ul>
+          <li className="appTitle"><a href="home.asp">DnD-Utils</a></li>
+          <li><a href="databases.asp">Databases</a></li>
+          <li><a href="tools.asp">Tools</a></li>
+          <li><a href="about.asp">About</a></li>
+        </ul> 
       </header>
       <div className='secondHeader'>
         <p>secondHeader</p>
+      </div>
+      <div className='body'>
+        <SpellList />
       </div>
     </div>
   );

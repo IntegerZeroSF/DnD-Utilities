@@ -1,0 +1,47 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(33,32,30,0.2);
+    transition: 0.3s;
+    width: 40%;
+    padding: 0% 0% 10%; 
+    margin: auto;
+    margin-top: 3rem;
+    
+  }
+
+.card:hover {
+    box-shadow: 0 8px 24px 0 rgba(33,32,30,0.2);
+}
+
+.cardTitle {
+    background-color: #D81921;
+    width: 100%;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    align-content: center;
+}
+
+.cardDescrip {
+    float: center;
+}
+
+.higherLvl {
+    float: left;
+}
+
+.variTools {
+    /* position:relative; */
+    width: 200px;
+    float: right;
+    /* float: right; */
+    /* margin-left: 4rem; */
+    /* display: inline-block */
+}
+
+.cardFooter {
+    background-color: #21201E;
+    width: 100%;
+    height: 1rem;
+    /* padding-bottom: 0rem; */
+}
