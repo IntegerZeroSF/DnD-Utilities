@@ -1,49 +1,71 @@
 import React from 'react';
 import './App.css'
-import { BrowserRouter as Router, Switch, ROute, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Home from './Home.js'
-// import { useEffect } from 'react'
+import About from  './About.js'
 
-import SpellList from './SpellList/SpellList.js'
+import SpellList from './Databases/SpellList/SpellList.js'
+import TraitsList from './Databases/TraitsList/TraitsList.js'
 
 //http://dnd5eapi.co/api/
+//change features into traits
 
 
 function App() {
 
   return (
+    <Router>
     <div className="fullApp">
-      
+ 
       <nav className='header'>
-         <ul>
-          <li className="appTitle"><a href="home.asp">DnD-Utils</a></li>
-          <li><a href="databases.asp">Databases</a>
-            <ul class="dropdown">
-              <li><a href="#">Sub-1</a></li>
-              <li><a href="#">Sub-2</a></li>
-              <li><a href="#">Sub-3</a></li>
-            </ul>
+        <ul>
+          <li><Link to='/home' className='appTitle'>DnD Utils</Link></li>
+          <li className="dropdown">
+            <a className="dropbtn">Databases</a>
+            <div className="dropdown-content">
+              <Link to='/spelllist'>Spells</Link>
+              <Link to='/traitslist'>Traits</Link>
+              <a href="*">Example 3</a>
+            </div>
           </li>
-          <li><a href="tools.asp">Tools</a>
-            <ul class="dropdown">
-              <li><a href="#">Sub-1</a></li>
-              <li><a href="#">Sub-2</a></li>
-              <li><a href="#">Sub-3</a></li>
-            </ul>
+          <li className="dropdown">
+            <a className="dropbtn">Tools</a>
+            <div className="dropdown-content">
+              <a href="*">Dice Roller</a>
+              <a href="*">Health Counter</a>
+              <a href="*">Example 3</a>
+            </div>
           </li>
-          <li><a href="about.asp">About</a></li>
-        </ul> 
-      </nav> 
+          <li><Link to="/about">About</Link></li>
+        </ul>
+      </nav>
+      
       
       <div className='secondHeader'>
-        <p>secondHeader</p>
       </div>
       <div className='body'>
-        <Home />
-        <SpellList />
+        <Switch>
+          __________________        
+          <Route path='/home'>
+            <Home />
+          </Route>
+          __________________
+          <Route path='/spelllist'>
+            <SpellList />
+          </Route>
+          <Route path='/traitslist'>
+            <TraitsList />
+          </Route>
+          __________________
+          <Route path='/about'>
+            <About />
+          </Route>
+        </Switch>
       </div>
       <div className='footer' />
+
     </div>
+    </Router>
   );
 }
 
