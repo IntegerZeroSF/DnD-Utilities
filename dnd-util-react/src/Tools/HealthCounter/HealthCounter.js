@@ -22,7 +22,7 @@ function HealthCounter() {
     }
 
     return (
-        <div>
+        <div className='hpBody'>
             <div className='hpModule'>
                 <div className='hpDiv'>
                     <h1 className='hpTitle'>Current Health</h1> 

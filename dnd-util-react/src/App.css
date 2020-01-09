@@ -77,10 +77,11 @@ li.dropdown {
   width: 100%;
 }
 
-.body {
+.mainBody {
   /* padding-top: 1rem; */
   background-color: #F5F5F5;
   /* padding-bottom: 1rem; */
+  min-height: 87.8vh;
 }
 
 .footer {

@@ -57,7 +57,7 @@ function App() {
       
       <div className='secondHeader'>
       </div>
-      <div className='body'>
+      <div className='mainBody'>
         <Switch>
           __________________        
           <Route path='/home'exact = {true} component={Home} />
