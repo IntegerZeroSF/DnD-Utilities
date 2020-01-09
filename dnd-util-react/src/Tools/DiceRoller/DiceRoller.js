@@ -31,7 +31,8 @@ function DiceRoller() {
     const rollD20 = () => {
         setDice(prevState => 0)
         setDice(prevState => prevState + Math.floor(Math.random() * 20 + 1))
-
+        // if(dice === 1) {setDice('1... oof nat 1')}
+        // if(dice === 20) {setDice('20... nice!')}
     }
 
 

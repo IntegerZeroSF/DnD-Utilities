@@ -6,7 +6,7 @@ function SingleSpell(props) {
 
     const [spell, setSpell] = useState([]);
     var inputFetch = props.match.params.spellName
-    var ouputFetch = inputFetch.toLowerCase().replace(' ' , '-' )
+    var ouputFetch = inputFetch.toLowerCase().replace(' ' , '-' ).replace(' ' , '-' ).replace(' ' , '-' ).replace(' ' , '-' )
 
     useEffect(() => {
         fetch(`http://www.dnd5eapi.co/api/spells/${ouputFetch}`)
@@ -27,10 +27,10 @@ function SingleSpell(props) {
                         <div className='variTools'>
                                 <span className='spellLvl'>Level: {spell.level}</span>
                                 <span className='range'>Range: {spell.range}</span>
-                                <span className='components'>Components :{spell.components}</span>
-                                {/* <span className='ritual'>A Ritual: {spell.ritual}</span> */}
+                                <span className='components'>Components: {spell.components}</span>
+                                <span className='ritual'>A Ritual: {`${spell.ritual}`}</span>
                                 <span className='duration'>Duration: {spell.duration}</span>
-                                {/* <h5 className='conc'>Concentration: {spell.concentration}</h5> */}
+                                <h5 className='conc'>Concentration: {`${spell.concentration}`}</h5>
                                 <span className='castingTime'>Casting Time: {spell.casting_time}</span>
                         </div>
                     <div className='cardFooter'></div>

@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import Home from './Home.js'
-import About from  './About.js'
+import Home from './OtherPages/Home/Home.js'
+import About from  './OtherPages/About/About.js'
 
 import SpellList from './Databases/SpellList/SpellList.js'
 import TraitsList from './Databases/TraitsList/TraitsList.js'
@@ -50,29 +50,15 @@ function App() {
       <div className='body'>
         <Switch>
           __________________        
-          <Route path='/home'>
-            <Home />
-          </Route>
+          <Route path='/home'exact = {true} component={Home} />
           __________________
-          <Route path='/spelllist' exact = {true}> 
-            <SpellList />
-          </Route>
-          <Route path='/traitslist' exact = {true}>
-            <TraitsList />
-          </Route>
-
+          <Route path='/spelllist' exact = {true} component={SpellList} /> 
+          <Route path='/traitslist' exact = {true} component={TraitsList} />
           __________________
-          <Route path='/diceroller' exact = {true}>
-            <DiceRoller />
-          </Route>
-
-          <Route path='/healthcounter' exact = {true}>
-            <HealthCounter />
-          </Route>
+          <Route path='/diceroller' exact = {true} component={DiceRoller} />
+          <Route path='/healthcounter' exact = {true} component={HealthCounter} />
           __________________
-          <Route path='/about'>
-            <About />
-          </Route>
+          <Route path='/about' exact = {true} component={About} />
           __________________
           <Route path='/spelllist/spell/:spellName/' 
                  component={SingleSpell}
@@ -80,7 +66,8 @@ function App() {
           <Route path='/traitslist/trait/:traitName/'
                  component={SingleTrait}
           />       
-
+          __________________
+          <Home />
         </Switch>
       </div>
       <div className='footer' />

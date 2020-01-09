@@ -17,7 +17,7 @@ function TraitsList() {
 
   const renderTraits = traits.map( (trait, index) => {
     return (
-      <Link to={`/traitlist/trait/${trait.name}/`}  
+      <Link to={`/traitslist/trait/${trait.name}/`}  
             className='singleFeature' 
             key={trait.index}
             url={trait.url}
