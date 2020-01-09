@@ -12,10 +12,9 @@ function SingleSpell(props) {
         fetch(`http://www.dnd5eapi.co/api/spells/${ouputFetch}`)
         .then(res => res.json())
         .then(spellData => {
-            // console.log(spellData)
             setSpell(spellData)
         })
-    }, );
+    }, []);
 
     return (
         <div className='body'>

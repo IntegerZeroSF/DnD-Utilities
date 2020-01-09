@@ -6,15 +6,16 @@ import About from  './OtherPages/About/About.js'
 
 import SpellList from './Databases/SpellList/SpellList.js'
 import TraitsList from './Databases/TraitsList/TraitsList.js'
+import EquipmentList from './Databases/EquipmentList/EquipmentList.js'
 import DiceRoller from './Tools/DiceRoller/DiceRoller.js'
 import HealthCounter from './Tools/HealthCounter/HealthCounter.js'
 
 
 import SingleSpell from './Databases/SpellList/SingleSpell/SingleSpell.js'
 import SingleTrait from './Databases/TraitsList/SingleTrait/SingleTrait.js'
+import SingleEquip from './Databases/EquipmentList/SingleEquip/SingleEquip.js'
 
 //http://dnd5eapi.co/api/
-//change features into traits
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
             <div className="dropdown-content">
               <Link to='/spelllist'>Spells</Link>
               <Link to='/traitslist'>Traits</Link>
+              <Link to='/equipmentlist'>Equipment</Link>
             </div>
           </li>
           <li className="dropdown">
@@ -54,6 +56,8 @@ function App() {
           __________________
           <Route path='/spelllist' exact = {true} component={SpellList} /> 
           <Route path='/traitslist' exact = {true} component={TraitsList} />
+          <Route path='/equipmentlist' exact = {true} component={EquipmentList} />
+
           __________________
           <Route path='/diceroller' exact = {true} component={DiceRoller} />
           <Route path='/healthcounter' exact = {true} component={HealthCounter} />
@@ -65,7 +69,10 @@ function App() {
           />
           <Route path='/traitslist/trait/:traitName/'
                  component={SingleTrait}
-          />       
+          />
+          <Route path='/equipmentlist/equip/:equipName/'
+                 component={SingleEquip}
+          />          
           __________________
           <Home />
         </Switch>
