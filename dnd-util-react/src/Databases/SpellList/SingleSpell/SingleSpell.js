@@ -27,9 +27,9 @@ function SingleSpell(props) {
                                 <span className='spellLvl'>Level: {spell.level}</span>
                                 <span className='range'>Range: {spell.range}</span>
                                 <span className='components'>Components: {spell.components}</span>
-                                <span className='ritual'>A Ritual: {`${spell.ritual}`}</span>
+                                <span className='ritual'>Ritual: {`${spell.ritual}`}</span>
                                 <span className='duration'>Duration: {spell.duration}</span>
-                                <h5 className='conc'>Concentration: {`${spell.concentration}`}</h5>
+                                <span className='conc'>Concentration: {`${spell.concentration}`}</span>
                                 <span className='castingTime'>Casting Time: {spell.casting_time}</span>
                         </div>
                     <div className='cardFooter'></div>

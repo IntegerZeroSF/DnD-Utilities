@@ -1,6 +1,10 @@
 import React from 'react';
 import './App.css'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet'
+import Dice from './OtherPages/Home/d20 dice.png'
+
+
 import Home from './OtherPages/Home/Home.js'
 import About from  './OtherPages/About/About.js'
 
@@ -22,6 +26,10 @@ function App() {
 
   return (
     <Router>
+    <Helmet>
+      <title>DnD-Utils</title>
+    </Helmet>
+    
     <div className="fullApp">
  
       <nav className='header'>
