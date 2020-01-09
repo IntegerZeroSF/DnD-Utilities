@@ -3,8 +3,6 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom"
 import "./TraitsList.css";
 
-// import SingleSpell from "./SingleSpell/SingleSpell.js";
-// Traits
 
 function TraitsList() {
 
@@ -17,10 +15,15 @@ function TraitsList() {
       .then(traitsData => setTraits(traitsData.results))
   }, []);
 
-  const renderTraits = traits.map( (trait, index) => <Link to={trait.index}  className='singleFeature' key={trait.index}>{trait.name}</Link> ) 
+  const renderTraits = traits.map( (trait, index) => {
+    return (
+      <Link to={`/traitlist/trait/${trait.name}/`}  
+            className='singleFeature' 
+            key={trait.index}
+            url={trait.url}
+            >{trait.name}</Link> )}) 
 
 
-  // console.log(spells)
   return (
     <div className='mainDisplay'>
       {renderTraits}

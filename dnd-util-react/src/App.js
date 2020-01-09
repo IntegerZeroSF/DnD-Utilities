@@ -6,6 +6,12 @@ import About from  './About.js'
 
 import SpellList from './Databases/SpellList/SpellList.js'
 import TraitsList from './Databases/TraitsList/TraitsList.js'
+import DiceRoller from './Tools/DiceRoller/DiceRoller.js'
+import HealthCounter from './Tools/HealthCounter/HealthCounter.js'
+
+
+import SingleSpell from './Databases/SpellList/SingleSpell/SingleSpell.js'
+import SingleTrait from './Databases/TraitsList/SingleTrait/SingleTrait.js'
 
 //http://dnd5eapi.co/api/
 //change features into traits
@@ -25,15 +31,13 @@ function App() {
             <div className="dropdown-content">
               <Link to='/spelllist'>Spells</Link>
               <Link to='/traitslist'>Traits</Link>
-              <a href="*">Example 3</a>
             </div>
           </li>
           <li className="dropdown">
             <a className="dropbtn">Tools</a>
             <div className="dropdown-content">
-              <a href="*">Dice Roller</a>
-              <a href="*">Health Counter</a>
-              <a href="*">Example 3</a>
+              <Link to='/diceroller'>Dice Roller</Link>
+              <Link to='/healthcounter'>Health Counter</Link>
             </div>
           </li>
           <li><Link to="/about">About</Link></li>
@@ -50,16 +54,33 @@ function App() {
             <Home />
           </Route>
           __________________
-          <Route path='/spelllist'>
+          <Route path='/spelllist' exact = {true}> 
             <SpellList />
           </Route>
-          <Route path='/traitslist'>
+          <Route path='/traitslist' exact = {true}>
             <TraitsList />
+          </Route>
+
+          __________________
+          <Route path='/diceroller' exact = {true}>
+            <DiceRoller />
+          </Route>
+
+          <Route path='/healthcounter' exact = {true}>
+            <HealthCounter />
           </Route>
           __________________
           <Route path='/about'>
             <About />
           </Route>
+          __________________
+          <Route path='/spelllist/spell/:spellName/' 
+                 component={SingleSpell}
+          />
+          <Route path='/traitslist/trait/:traitName/'
+                 component={SingleTrait}
+          />       
+
         </Switch>
       </div>
       <div className='footer' />

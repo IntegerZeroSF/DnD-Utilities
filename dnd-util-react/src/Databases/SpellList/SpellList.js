@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom"
 import "./SpellList.css";
 
-// import SingleSpell from "./SingleSpell/SingleSpell.js";
 
 function SpellList() {
 
@@ -16,18 +15,15 @@ function SpellList() {
       .then(spellData => setSpells(spellData.results))
   }, []);
 
- const loadSingle = () => {
-   console.log(spells.index)
- }
 
-  const renderSpells = spells.map( (spell, index) => 
-    <Link to={spell.index}  
-          className='singleSpell' 
-          key={spell.index}
-          onClick={loadSingle}>{spell.name}</Link> ) 
+  const renderSpells = spells.map( (spell, index) => {
+    return (
+      <Link to={`/spelllist/spell/${spell.name}/`} 
+            className='singleSpell'
+            key={spell.index}
+            url={spell.url}
+            >{spell.name}</Link> )}) 
 
-
-  // console.log(spells)
   return (
     <div className='mainDisplay'>
       {renderSpells}
